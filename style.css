@@ -1,0 +1,15 @@
+#form_container{
+    display: none;
+}
+
+
+.ani{
+    transition: transform 0.35s linear;
+    /* background-color: black; */
+    transform: translateX(200px);
+}
+
+.deani{
+    transition: transform 0.35s linear;
+    transform: translateX(0px);
+}
