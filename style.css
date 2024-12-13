@@ -1,0 +1,63 @@
+ body{
+   background-color: rgb(95, 158, 900); 
+   
+ }
+ .business_card{
+    
+    border-radius: 20px;
+     box-shadow:  5px 5px 5px;
+     margin-top: 30%;
+    margin-left: 40%;
+    margin-bottom: 40%; 
+ 
+    border: 3px solid rgb(3, 198, 700);
+    padding: 10px;
+    font-size: 15px;
+    
+    background-color: rgb(50, 104, 700); 
+  
+    }
+#name{
+    
+   color:rgb(255, 234, 1);
+   text-align: right;
+     padding-top: 10%;
+     /* border: 3px solid #d7f60f; */
+    margin-left: 70%;
+    margin: top 15%;;
+    margin-bottom: 10%;
+   
+
+
+  }  
+#job_title{
+color: white;
+/* border: 3px solid #ede7ef; */
+margin-right: 30%;
+
+  }
+#contact{
+    color: rgb(252, 252, 252);
+     /* border: 3px dotted #f00b6a;  */
+    margin-bottom: 10%;
+    margin-right: 36%;
+    
+  }
+#links{
+   display: flex;
+    justify-content: space-between;
+    
+border: 3px solid #02f74b;
+}
+#linkedin{
+  color: coral;
+
+}
+#website{
+  color: cyan;
+
+} 
+#github{
+    color: hotpink;
+    
+}
