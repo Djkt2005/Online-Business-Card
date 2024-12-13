@@ -1,13 +1,103 @@
-.business_card{
-    border-radius: 20px;
-    box-shadow:  5px 5px 5px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left-panel {
+    width: 40%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
     text-align: center;
-    margin-top: 10%;
-    margin-left: 25%;
-    /* margin: auto; */
-    width: 50%;
-    border: 3px solid black;
+}
+
+.input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.input input {
     padding: 10px;
-    font-size: 15px;
-    height: 50%;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0055aa;
+}
+
+.right-panel {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+}
+
+.business_card {
+    width: 80%;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.business_card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.business-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.business-card ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #0066cc;
 }
