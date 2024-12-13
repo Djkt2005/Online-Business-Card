@@ -1,27 +1,13 @@
-let dd = document.getElementById("dropdown");
-let bar = document.getElementById('slide');  
+function saveUserData() {  
+  let name = document.getElementById("name").value;  
+  let address = document.getElementById("address").value;  
+  let email = document.getElementById("email").value;  
+  let phone = document.getElementById("phone").value;  
+  let addlink = document.getElementById("add-link").value;  
 
-function myFunction(x) {  
-  x.classList.toggle("change");  
-
-  if (dd.style.display === "block") {  
-    dd.style.opacity = 1;  
-    dd.style.transform = "translateY(0px)";  
-    setTimeout(() => {  
-      dd.style.display = "none"; 
-    }, 400);
-  } else {  
-    dd.style.display = "block";  
-    dd.style.opacity = 0;  
-    dd.style.transform = "translateY(-10px)";
-
-    dd.offsetHeight;
-
-    dd.style.transition = 'opacity 0.4s ease, transform 0.4s ease';  
-    dd.style.opacity = 1;  
-    dd.style.transform = "translateY(0px)";  
-  }  
+  localStorage.setItem("name", name);  
+  localStorage.setItem("address", address);  
+  localStorage.setItem("email", email);  
+  localStorage.setItem("phone", phone);  
+  localStorage.setItem("addlink", addlink);  
 }  
-
-dd.style.display = 'none';  
-dd.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
