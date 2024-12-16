@@ -1,63 +1,177 @@
- body{
-   background-color: rgb(95, 158, 900); 
-   
- }
- .business_card{
-    
-    border-radius: 20px;
-     box-shadow:  5px 5px 5px;
-     margin-top: 30%;
-    margin-left: 40%;
-    margin-bottom: 40%; 
- 
-    border: 3px solid rgb(3, 198, 700);
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color:#F065 ;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left-panel {
+    width: 40%;
+    background-color: #003366;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.input input {
     padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    background-color: #0066cc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0055aa;
+}
+
+.right-panel {
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-panel h2 {
+    margin-bottom: 20px;
+}
+
+.business_card {
+    width: 8%;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.business_card p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.business-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.business-card ul li {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #0066cc;
+}
+ .business_card1 {
+     width: 90pc;
+     border-radius: 20px;
+     box-shadow: 5px 5px 5px;
+     margin-top: 10%;
+     margin-bottom: 10%;
+     margin-right: 10%;
+     margin-left: 10%;
+    border: 3px solid rgb(3, 198, 700);
     font-size: 15px;
-    
-    background-color: rgb(50, 104, 700); 
-  
-    }
-#name{
-    
-   color:rgb(255, 234, 1);
-   text-align: right;
+    background-color: #003366;
+
+ }
+
+ #name {
+
+     color: rgb(255, 234, 1);
+     text-align: right;
      padding-top: 10%;
      /* border: 3px solid #d7f60f; */
-    margin-left: 70%;
-    margin: top 15%;;
-    margin-bottom: 10%;
-   
+     
+     
 
 
-  }  
-#job_title{
-color: white;
-/* border: 3px solid #ede7ef; */
-margin-right: 30%;
 
-  }
-#contact{
-    color: rgb(252, 252, 252);
+ }
+
+ #job_title {
+     color: white;
+     /* border: 3px solid #ede7ef; */
+     margin-right: 30%;
+     margin-top: 10px;
+
+ }
+
+ #contact {
+     color: rgb(252, 252, 252);
      /* border: 3px dotted #f00b6a;  */
-    margin-bottom: 10%;
-    margin-right: 36%;
-    
-  }
-#links{
-   display: flex;
-    justify-content: space-between;
-    
-border: 3px solid #02f74b;
-}
-#linkedin{
-  color: coral;
+     padding-top: px;
+     
+     margin-left: 10px; 
 
-}
-#website{
-  color: cyan;
+ }
 
-} 
-#github{
-    color: hotpink;
+ #links {
+    padding: 40px;
+     margin-top: 50px;
+     margin-bottom: 90%;
+     border-radius: 10px;
+     display: flex;
+     justify-content: space-between ;
+   
     
-}
+     border: 3px solid #f7eb02;
+ }
+
+ #linkedin {
+     color: coral;
+
+ }
+
+ #website {
+     color: cyan;
+
+ }
+
+ #github {
+     color: hotpink;
+
+ }
+ #reset{
+    margin-top: 10px;
+ }
