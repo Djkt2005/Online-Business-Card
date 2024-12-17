@@ -14,6 +14,7 @@ function saveUserData() {
     localStorage.setItem("links", links);
 
     displayUserData();
+    showFormData();
 }
 
 function getUserData() {
@@ -48,4 +49,37 @@ function displayUserData() {
         }
     });
 }
-document.addEventListener("DOMContentLoaded", displayUserData);
+function showFormData() {
+    const userData = getUserData();
+
+    document.getElementById("name-input").value = userData.name === "Name" ? "" : userData.name;
+    document.getElementById("job-title").value = userData.jobTitle === "Job Title" ? "" : userData.jobTitle;
+    document.getElementById("address-input").value = userData.address === "Address" ? "" : userData.address;
+    document.getElementById("email-input").value = userData.email === "Email" ? "" : userData.email;
+    document.getElementById("phone-input").value = userData.phone === "Phone" ? "" : userData.phone;
+    document.getElementById("links-input").value = userData.links;
+}
+
+function resetUserData() {
+    localStorage.clear();
+    document.getElementById("name-input").value = "";
+    document.getElementById("job-title").value = "";
+    document.getElementById("address-input").value = "";
+    document.getElementById("email-input").value = "";
+    document.getElementById("phone-input").value = "";
+    document.getElementById("links-input").value = "";
+
+    document.getElementById("display-name").textContent = "Name";
+    document.getElementById("display-job-title").textContent = "Job Title";
+    document.getElementById("display-address").textContent = "Address";
+    document.getElementById("display-email").textContent = "Email";
+    document.getElementById("display-phone").textContent = "Phone";
+
+    const linksList = document.getElementById("display-links").querySelector("ul");
+    linksList.innerHTML = "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    displayUserData();
+    showFormData();
+});

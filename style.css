@@ -16,6 +16,7 @@ body {
     background-color: #003366;
     color: white;
     display: flex;
+    height: 120vh;
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
@@ -45,6 +46,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 button {
     padding: 10px;
     background-color: #0066cc;
@@ -54,6 +61,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    flex: 1; 
 }
 
 button:hover {
@@ -91,12 +99,12 @@ button:hover {
     color: #333;
 }
 
-.business-card ul {
+.business_card ul {
     list-style-type: none;
     padding: 0;
 }
 
-.business-card ul li {
+.business_card ul li {
     margin: 5px 0;
     font-size: 14px;
     color: #0066cc;

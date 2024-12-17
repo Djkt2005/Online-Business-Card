@@ -34,7 +34,10 @@
                 <label for="links-input">Add Links</label>
                 <input type="text" id="links-input" placeholder="e.g., LinkedIn, GitHub, Website">
             </div>
-            <button type="button" onclick="saveUserData()">Submit</button>
+            <div class="buttons">
+                <button type="button" onclick="saveUserData()">Submit</button>
+                <button type="button" onclick="resetUserData()">Reset</button>
+            </div>
         </form>
 
         <!-- Right Panel -->
@@ -47,9 +50,6 @@
                 <p id="display-address">Address</p>
                 <div id="display-links">
                     <ul>
-                        <li>LinkedIn</li>
-                        <li>GitHub</li>
-                        <li>Website</li>
                     </ul>
                 </div>
             </div>
