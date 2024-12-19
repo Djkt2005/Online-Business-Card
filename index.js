@@ -1,15 +1,62 @@
-function saveUserData() {  
+function validateInputs() {
+    let isValid = true;
+    const fields = [
+        { id: "name-input", type: "text", message: "Please enter a valid name." },
+        { id: "job-title", type: "text", message: "Please enter a valid job title." },
+        { id: "address-input", type: "text", message: "Please enter a valid address." },
+        { id: "email-input", type: "email", message: "Please enter a valid email address." },
+        { id: "phone-input", type: "phone", message: "Please enter a valid phone number." },
+        { id: "links-input", type: "text", message: "Please enter valid links." }
+    ];
+
+    fields.forEach(field => {
+        const input = document.getElementById(field.id);
+        const value = input.value.trim();
+
+        if (field.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+            showError(input, field.message);
+            isValid = false;
+        } else if (field.type === "phone" && !/^\d{7,}$/.test(value)) {
+            showError(input, field.message);
+            isValid = false;
+        } else if (!value) {
+            showError(input, `This field is required.`);
+            isValid = false;
+        } else {
+            clearError(input);
+        }
+    });
+
+    return isValid;
+}
+
+function showError(input, message) {
+    input.style.border = "2px solid red";
+    if (!input.nextElementSibling || input.nextElementSibling.className !== "error-message") {
+        const errorMessage = document.createElement("span");
+        errorMessage.className = "error-message";
+        errorMessage.textContent = message;
+        input.parentNode.appendChild(errorMessage);
+    }
+}
+
+function clearError(input) {
+    input.style.border = "";
+    const errorMessage = input.nextElementSibling;
+    if (errorMessage && errorMessage.className === "error-message") {
+        errorMessage.remove();
+    }
+}
+function saveUserData() { 
+    if (!validateInputs()) {
+        return; 
+    } 
     const name = document.getElementById("name-input").value;  
     const jobTitle = document.getElementById("job-title").value;  
     const address = document.getElementById("address-input").value;  
     const phone = document.getElementById("phone-input").value;  
     const links = document.getElementById("links-input").value;  
     const email = document.getElementById("email-input").value;  
-
-    if (!name || !jobTitle || !address || !email || !phone || !links) {  
-        alert("Please fill out all fields.");  
-        return;
-    }  
 
     const userDetails = {  
         name: name,  
