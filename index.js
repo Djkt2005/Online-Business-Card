@@ -165,3 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
     showFormData();
     animateBusinessCard();
 });
+
+function downloadBusinessCard() {
+    const businessCard = document.getElementById('business-card');
+    html2canvas(businessCard).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'business_card.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    });
+}
