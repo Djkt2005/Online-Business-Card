@@ -3,38 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>buisness card</title>
+    <title>Business Card</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form class="left-panel">
-        <div class="input">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+    <div class="container">
+        <form class="left-panel">
+            <div class="input">
+                <label for="name-input">Name</label>
+                <input type="text" id="name-input" placeholder="Enter your name">
+            </div>
+            <div class="input">
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" placeholder="Enter your job title">
+            </div>
+            <div class="input">
+                <label for="address-input">Address</label>
+                <input type="text" id="address-input" placeholder="Enter your address">
+            </div>
+            <div class="input">
+                <label for="email-input">Email</label>
+                <input type="email" id="email-input" placeholder="Enter your email">
+            </div>
+            <div class="input">
+                <label for="phone-input">Phone Number</label>
+                <input type="text" id="phone-input" placeholder="Enter your phone number">
+            </div>
+            <div class="input">
+                <label for="links-input">Add Links</label>
+                <input type="text" id="links-input" placeholder="e.g., LinkedIn, GitHub, Website">
+            </div>
+            <div class="template">
+                <label for="template-select">Select Template</label>
+                <select id="template-select" onchange="changeTemplate()">
+                    <option value="business_card_1">1</option>
+                    <option value="business_card_2">2</option>
+                    <option value="business_card_3">3</option>
+                </select>
+            </div><br>
+            <div class="buttons">
+                <button type="button" onclick="saveUserData()">Submit</button>
+                <button type="button" onclick="resetUserData()">Reset</button>
+            </div>
+        </form>
+        <div class="right-panel">
+            <div id="business-card" class="business_card_1">
+                <div class="card-left">
+                    <p id="display-name">Name</p>
+                    <p id="display-job-title">Job Title</p>
+                </div>
+                <div class="card-right">
+                    <p id="display-email">Email</p>
+                    <p id="display-phone">Phone</p>
+                    <p id="display-address">Address</p>
+                    <div id="display-links">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="download-container">
+                <button id="download-button" onclick="downloadBusinessCard()">Download</button>
+            </div>
         </div>
-
-        <div class="input">
-            <label for="address">Address</label>
-            <input type="text" id="address" placeholder="Enter your address">
-        </div>
-
-        <div class="input">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
-        </div>
-
-        <div class="input">
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" placeholder="Enter your phone number">
-        </div>
-
-        <div class="input">
-            <label for="add-link">Add Link</label>
-            <input type="text" id="add-link" placeholder="Enter a link">
-        </div>
-
-        <button type="submit" onclick="saveUserData()">Submit</button>
-    </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
